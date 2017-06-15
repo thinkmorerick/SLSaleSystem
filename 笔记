@@ -1,0 +1,70 @@
+====系统UI界面（Bootstrap）、登录、注销、菜单动态加载（权限设计、redis）=======
+
+1、基础框架的准备（SVN打分支） --003
+2、系统UI界面（Bootstrap）
+	1> Bootstrap插件包、日期插件（calendar）引入工程
+	2> 创建localjs和localcss放置自定义的js文件和css文件
+	3> 登录页面
+
+Bootstrap-1
+
+Bootstrap(charisma-master)
+	-简单灵活可用于框架流行的用户界面和交互接口的html、css、JavaScript工具集
+	-基于jQuery框架，并兼容大部分jQuery插件
+	-基于html5、css3实现响应式设计
+	-官网
+		http://getbootsrap.com
+		http://www.bootcss.com(中文网)
+		
+Bootstrap-2
+
+组件与插件
+	-按钮下拉菜单（button drown menu）
+	-模式窗口（Modals）
+	-导航条（Navbar）
+注意：由于很多组件都是通过jQuery插件扩展出来的，故须拷贝html原生代码
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
