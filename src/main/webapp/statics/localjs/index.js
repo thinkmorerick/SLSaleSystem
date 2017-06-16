@@ -5,21 +5,21 @@ $("#loginBtn").click(function(){
 	user.isStart = 1;
 	
 	if(user.loginCode == "" || user.loginCode == null){
-		$("#loginCode").focus;
+		$("#loginCode").focus();
 		$("#formtip").css("color","red");
 		$("#formtip").html("对不起，登录账号不能为空。");
 		
 	}else if(user.password == "" || user.password == null){
-		$("#password").focus;
+		$("#password").focus();
 		$("#formtip").css("color","red");
 		$("#formtip").html("对不起，登录密码不能为空。");
 	}else{
 		$("#formtip").html("");
-	}
+	
 	
 	$.ajax({
-		type:"POST",
 		url:"/login.html",
+		type:"POST",
 		data:{user:JSON.stringify(user)},
 		dataType:'html',
 		timeout:1000,
@@ -29,29 +29,30 @@ $("#loginBtn").click(function(){
 		},
 		success:function(result){
 			
-			if(result != "" && result == "success"){//若登录成功，跳转到"/main.html"
+			if(result != "" && "success" == result){
 				window.location.href='/main.html';
-			}else if(result == "failed"){
+			}else if("failed" == result){
 				$("#formtip").css("color","red");
-				$("#formtip").html("登录失败！请重试。");
-				$("#loginCode").val('');
+				$("#formtip").html("登陆失败！请重试。");
+				$("#logincode").val('');
 				$("#password").val('');
-			}else if(result == "nologincode"){
+			}
+			else if("nologincode" == result){
 				$("#formtip").css("color","red");
-				$("#formtip").html("登录账号不存在！请重试。");
-			}else if(result == "pwderror"){
-				$("#formtip").css("color","red");
-				$("#formtip").html("登录密码错误！请重试。");
-			}else if(result == "nodata"){
+				$("#formtip").html("登录账号不存在，请重试。");
+			}else if("nodata" == result){
 				$("#formtip").css("color","red");
 				$("#formtip").html("对不起，没有任何数据需要处理！请重试。");
+			}else if("pwderror" == result){
+				$("#formtip").css("color","red");
+				$("#formtip").html("登录密码错误，请重试。");
 			}
 		}
 		
 	});
 	
 	
-	
+	}
 	
 	
 	

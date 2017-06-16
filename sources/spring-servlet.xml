@@ -16,7 +16,9 @@
            http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<!-- 静态文件映射 -->
+	 
 	<mvc:resources mapping="/statics/**" location="/statics/" />
+	
 	<!-- 以annotation的方式，装配controller -->
 	<mvc:annotation-driven/>
 	

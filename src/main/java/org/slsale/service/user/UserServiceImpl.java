@@ -18,8 +18,13 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public int addUser(User user) throws Exception {
-		return userMapper.addUser(user);
+	public int loginCodeIsExit(User user) throws Exception {
+		return userMapper.loginCodeIsExit(user);
+	}
+
+	@Override
+	public int modifyUser(User user) throws Exception {
+		return userMapper.modifyUser(user);
 	}
 
 }

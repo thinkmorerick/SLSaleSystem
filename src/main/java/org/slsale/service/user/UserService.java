@@ -4,7 +4,7 @@ import org.slsale.pojo.User;
 
 public interface UserService {
 	/**
-	 * 登录
+	 * getLoginUser
 	 * @param user
 	 * @return
 	 * @throws Exception
@@ -12,10 +12,18 @@ public interface UserService {
 	public User getLoginUser(User user) throws Exception;
 
 	/**
-	 * 注册用户
+	 * loginCodeIsExit
 	 * @param user
 	 * @return
 	 * @throws Exception
 	 */
-	public int addUser(User user) throws Exception;
+	public int loginCodeIsExit(User user) throws Exception;
+
+	/**
+	 * modifyUser
+	 * @param user
+	 * @return
+	 * @throws Exception
+	 */
+	public int modifyUser(User user) throws Exception;
 }
